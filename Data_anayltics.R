@@ -18,11 +18,11 @@ corpus <- tm_map(corpus, removePunctuation)
 corpus <- tm_map(corpus, removeWords, stopwords("english"))
 corpus <- tm_map(corpus, stripWhitespace)
 
-# Document-term matrix
+# Document-term matrix (freuqency of words)
 dtm <- DocumentTermMatrix(corpus)
 
 # Split data
-set.seed(123)
+set.seed(123)#randomness
 split <- sample.split(data$label, SplitRatio = 0.8)
 
 train_dtm <- dtm[split == TRUE, ]
@@ -31,7 +31,7 @@ test_dtm  <- dtm[split == FALSE, ]
 train_labels <- data$label[split == TRUE]
 test_labels  <- data$label[split == FALSE]
 
-# Convert counts to Yes/No
+# Convert counts to Yes/No ( noise reduction)
 convert_counts <- function(x) {
   ifelse(x > 0, "Yes", "No")
 }
