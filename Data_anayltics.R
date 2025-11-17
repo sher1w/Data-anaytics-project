@@ -1,6 +1,6 @@
-library(tm)
-library(e1071)
-library(caTools)
+library(tm) # text mining package
+library(e1071) # naiveBayesian Clasiifer
+library(caTools) # split data sets
 
 # Load dataset
 data <- read.csv("C:/Users/Me/Desktop/spam.csv", encoding = "latin1")
