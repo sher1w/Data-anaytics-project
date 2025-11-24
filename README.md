@@ -1,1 +1,2 @@
 # Data-anaytics-project
+built a Naive Bayes classifier to predict whether a message is spam or not. The model works by breaking the text into words, calculating how often each word appears in spam vs normal messages, and then using these probabilities to guess the class of any new message. It’s called “naive” because it assumes all words are independent, but even with this simple assumption, it gives surprisingly accurate results for text classification.
