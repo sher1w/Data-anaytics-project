@@ -127,6 +127,3 @@ Possible improvements include:
 * Trying other machine learning algorithms
 * Adding better text preprocessing techniques
 * Improving the Shiny interface for real-time predictions
-
-
-It will take like **2 minutes to memorize and makes you look prepared.**
